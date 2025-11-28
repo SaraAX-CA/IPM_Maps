@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey Demand Map - City of Playford</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>Hockey Demand Dashboard</h1>
+                <p class="subtitle">City of Playford • 2025 Forecast</p>
+            </div>
+            <div class="header-controls">
+                <!-- Placeholder for future controls -->
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="map-container">
+                <div id="map"></div>
+
+                <div class="map-overlay-controls">
+                    <div class="control-card">
+                        <h3>Demand Layers</h3>
+                        <div class="layer-toggle">
+                            <label class="radio-container">
+                                <input type="radio" name="demandLayer" value="OrganisedDemand_2025" checked>
+                                <span class="radio-checkmark"></span>
+                                <span class="label-text">Organised Demand</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="demandLayer" value="CasualDemand_2025">
+                                <span class="radio-checkmark"></span>
+                                <span class="label-text">Casual Demand</span>
+                            </label>
+                        </div>
+
+                        <div class="legend-container" id="legend">
+                            <!-- Legend will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Data JS -->
+    <script src="data.js"></script>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
